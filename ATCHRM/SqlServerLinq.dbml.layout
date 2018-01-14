@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 15.75" name="SqlServerLinq">
+  <DataContextMoniker Name="/SqlServerLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="91bb124b-2d7e-4c37-b380-be7968f1327f" absoluteBounds="3.75, 0.75, 2.625, 4.2708154296875">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/Adjuster_Detail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="047fdd00-b494-4ac5-8f96-e6a74e3bcc99" absoluteBounds="3.7649999999999997, 1.21, 2.5949999999999998, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3ff7acc-951b-4ddd-958b-655b6672bfa2" absoluteBounds="3.75, 6.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/AdjusterMaster_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aca8c64e-4c74-4d13-8abd-7970d8f01703" absoluteBounds="3.7650000000000006, 7.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8fe4bc58-b3ea-4a29-b91a-3c96a0d53b40" absoluteBounds="6.75, 6.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/EmployeeLeaveTaken_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e16f6f72-26cd-49a3-9d5f-c4a3613bb4d8" absoluteBounds="6.7650000000000006, 7.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="880127c9-f460-482f-a1c3-2e7d0e0bf3e5" absoluteBounds="7.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/ShiftMasterNew_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3ad95d0-41c8-4d2d-b53a-f25f80b76761" absoluteBounds="7.7650000000000006, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df2ac542-1594-42fa-ad87-1a59cc108ba2" absoluteBounds="9.75, 3.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/EmpContract_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0b820f2-f2a6-4bd9-af03-22cbcf93f9b2" absoluteBounds="9.765, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="111390f5-2c07-4283-ab7a-ef5f0aca3d55" absoluteBounds="9.75, 7.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/EmpContractDetail_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f09f92a2-52e4-4470-8a73-5f650b5ccf15" absoluteBounds="9.765, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71847cac-c764-423c-bc84-809fb823b71a" absoluteBounds="10.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/CloseRegisterRecord_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2d97407-d0ef-4b8e-a1f7-c3b189fb2703" absoluteBounds="10.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70b4507a-3e21-4247-bcc0-25b358b9290c" absoluteBounds="0.75, 10.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/ReportMaster_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="275f24b9-8994-48be-849f-f94c4d3d1ca5" absoluteBounds="0.76499999999999968, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a2bf7046-3cc8-4f98-902c-dc2a388e7b6b" absoluteBounds="3.75, 10.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/DepartmentLocation_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85c7f9a0-de98-4377-94ad-5c1b0db0cb5b" absoluteBounds="3.7649999999999997, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b726ca97-01f5-4cca-8ce5-b4182cf03b57" absoluteBounds="6.75, 10.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/EmployeesalCompApplicable_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64100890-9fb8-4477-8b23-207e1adb4e17" absoluteBounds="6.7650000000000006, 11.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f652a2b4-d7b2-4868-9354-51a9cda56b28" absoluteBounds="9.75, 10.75, 2, 3.6939111328125005">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/LeaveMaster_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af34dc38-3eee-422a-af43-59870a5b4ab5" absoluteBounds="9.765, 11.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d36d33e-f479-4efa-8f99-21f9dd208f1b" absoluteBounds="12.75, 3.75, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/ActionLog_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a61c0fd5-9aa6-42ee-b2e1-10b4ef8bd282" absoluteBounds="12.765, 4.2100000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab7ce2de-1e87-4feb-b020-3d4b1a9399f7" absoluteBounds="12.75, 6.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/EmployeSwipeDaily_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9ff4820-4ca2-4c35-b1b8-2c01a0d000ea" absoluteBounds="12.765, 7.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5e2074c-da2d-46e9-9b0e-9cd0c93e0ab1" absoluteBounds="12.625, 10.875, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/EmpSwipedataBank_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3814d0c0-f555-4809-92e1-aaf9d87bd702" absoluteBounds="12.64, 11.335, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bf35f8f6-7156-4206-968e-04b2aa1bd073" absoluteBounds="6.875, 13.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/AdjusterConsil_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1bc91936-6106-47f2-b95a-5d0cb34ab1a5" absoluteBounds="6.8900000000000006, 13.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d5bbc823-0e35-4b43-a0de-9eea6ed86db5" absoluteBounds="7, 1.125, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/LeaveApplicationMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09720916-14ee-43c5-812c-b19aea0b68bd" absoluteBounds="7.015, 1.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28e4357b-89c2-415a-8b48-c2d1f7f7cad1" absoluteBounds="4.625, 0.625, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/LeaveApprovalMaster_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a384a3e-b74a-4648-98b5-3fe6073049f5" absoluteBounds="4.64, 1.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c719f4e9-6ca0-4c1e-bbbb-964392af03c0" absoluteBounds="1.625, 1.125, 2, 8.5014469401041666">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/EmployeePersonalMaster_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da9a7d88-2e6e-4499-b31a-db26ff97e5f4" absoluteBounds="1.6400000000000001, 1.585, 1.9700000000000002, 7.9414469401041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8bfccbd8-64f4-4f3a-9b05-8735c3179563" absoluteBounds="7.625, 5.75, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/SqlServerLinqDataContext/EmpContractChangeApp_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="310ab306-bd38-4f8c-bc10-a88a2547b681" absoluteBounds="7.64, 6.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

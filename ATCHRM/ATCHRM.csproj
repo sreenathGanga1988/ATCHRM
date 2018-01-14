@@ -1,0 +1,2349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{349A4895-A619-4C77-8AC1-752A54A376F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATCHRM</RootNamespace>
+    <AssemblyName>ATCHRM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>\\213.42.33.230\Project\ATCHRMPUBLISH\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\213.42.33.230\Project\ATCHRMPUBLISH\</InstallUrl>
+    <UpdateUrl>\\213.42.33.230\Project\ATCHRMPUBLISH\</UpdateUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1135</ApplicationRevision>
+    <ApplicationVersion>1.0.9.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ATCHRM.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0109968D9C20C1EC5E643AB0568014873CB716EE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ATCHRM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Documents.Excel.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Infragistics\NetAdvantage 2012.1\Windows Forms\CLR2.0\Bin\Infragistics2.Documents.Excel.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.AppStylistSupport.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.Misc.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinExplorerBar.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinListView.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinTree.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics3.Documents.Excel.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Infragistics\NetAdvantage 2012.1\Windows Forms\CLR2.0\Bin\Infragistics3.Documents.Excel.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SString, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.SString.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\ActionApprovalLevel1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\ActionApprovalLevel1.Designer.cs">
+      <DependentUpon>ActionApprovalLevel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\ActionMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\ActionMasterForm.Designer.cs">
+      <DependentUpon>ActionMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\ActionReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\ActionReasonForm.Designer.cs">
+      <DependentUpon>ActionReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\AttendanceManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\AttendanceManagerForm.Designer.cs">
+      <DependentUpon>AttendanceManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\UserAuthenication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\UserAuthenication.Designer.cs">
+      <DependentUpon>UserAuthenication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\NewAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\NewAction.Designer.cs">
+      <DependentUpon>NewAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\OFFOtvalueApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\OFFOtvalueApproval.Designer.cs">
+      <DependentUpon>OFFOtvalueApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\OtValueApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\OtValueApproval.Designer.cs">
+      <DependentUpon>OtValueApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\tryform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\tryform.Designer.cs">
+      <DependentUpon>tryform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\Tryform2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Action\Tryform2.Designer.cs">
+      <DependentUpon>Tryform2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\AdministraionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\AdministraionForm.Designer.cs">
+      <DependentUpon>AdministraionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Gridform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Gridform.Designer.cs">
+      <DependentUpon>Gridform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\NotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\MultiContractApprovalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\MultiContractApprovalForm.Designer.cs">
+      <DependentUpon>MultiContractApprovalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\LeaveMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\LeaveMonitor.Designer.cs">
+      <DependentUpon>LeaveMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="encrypter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="encrypter.Designer.cs">
+      <DependentUpon>encrypter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\LocationandDeptLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\LocationandDeptLink.Designer.cs">
+      <DependentUpon>LocationandDeptLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReconcilationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReconcilationForm.Designer.cs">
+      <DependentUpon>ReconcilationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AttendanceDescrepancyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceDescrepancyReport.Designer.cs">
+      <DependentUpon>AttendanceDescrepancyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Ultrafridform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Ultrafridform.Designer.cs">
+      <DependentUpon>Ultrafridform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\AdvanceApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\AdvanceApplicationForm.Designer.cs">
+      <DependentUpon>AdvanceApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\AdvanceMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\AdvanceMasterForm.Designer.cs">
+      <DependentUpon>AdvanceMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\ContractRenewalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\ContractRenewalForm.Designer.cs">
+      <DependentUpon>ContractRenewalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\ContractRenewalMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\ContractRenewalMaster.Designer.cs">
+      <DependentUpon>ContractRenewalMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\DesignationChangeApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\DesignationChangeApplication.Designer.cs">
+      <DependentUpon>DesignationChangeApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\DesignationChangeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\DesignationChangeMaster.Designer.cs">
+      <DependentUpon>DesignationChangeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\FrmDeactivation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FrmDeactivation.Designer.cs">
+      <DependentUpon>FrmDeactivation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\GroupshiftchangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\GroupshiftchangeForm.Designer.cs">
+      <DependentUpon>GroupshiftchangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\VerbalWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\VerbalWarning.Designer.cs">
+      <DependentUpon>VerbalWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\FrmLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FrmLeave.Designer.cs">
+      <DependentUpon>FrmLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\FrmLHRStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FrmLHRStatus.Designer.cs">
+      <DependentUpon>FrmLHRStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\FrmOtShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FrmOtShow.Designer.cs">
+      <DependentUpon>FrmOtShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\FrmRecruit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FrmRecruit.Designer.cs">
+      <DependentUpon>FrmRecruit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\GatePassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\GatePassForm.Designer.cs">
+      <DependentUpon>GatePassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\GatepassMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\GatepassMaster.Designer.cs">
+      <DependentUpon>GatepassMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\LeaveApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LeaveApplicationForm.Designer.cs">
+      <DependentUpon>LeaveApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\LeaveConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LeaveConfirmForm.Designer.cs">
+      <DependentUpon>LeaveConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\LeaveEncashmentMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LeaveEncashmentMaster.Designer.cs">
+      <DependentUpon>LeaveEncashmentMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\LeaveEnchasementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LeaveEnchasementForm.Designer.cs">
+      <DependentUpon>LeaveEnchasementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\LevncasetsubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LevncasetsubForm.Designer.cs">
+      <DependentUpon>LevncasetsubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\LostHourRecoverSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LostHourRecoverSub.Designer.cs">
+      <DependentUpon>LostHourRecoverSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\LostHourRecoveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LostHourRecoveryForm.Designer.cs">
+      <DependentUpon>LostHourRecoveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\NonApprovedRecruitmentApllicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\NonApprovedRecruitmentApllicationForm.Designer.cs">
+      <DependentUpon>NonApprovedRecruitmentApllicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\OVertimeApplicationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\OVertimeApplicationMaster.Designer.cs">
+      <DependentUpon>OVertimeApplicationMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\OvertimeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\OvertimeMasterForm.Designer.cs">
+      <DependentUpon>OvertimeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\OvertimeSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\OvertimeSubForm.Designer.cs">
+      <DependentUpon>OvertimeSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\RecruitmentApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\RecruitmentApplicationForm.Designer.cs">
+      <DependentUpon>RecruitmentApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\RecruitmentApplicationMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\RecruitmentApplicationMasterForm.Designer.cs">
+      <DependentUpon>RecruitmentApplicationMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\RecruitmentCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\RecruitmentCodeForm.Designer.cs">
+      <DependentUpon>RecruitmentCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\ShiftChangeApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\ShiftChangeApplication.Designer.cs">
+      <DependentUpon>ShiftChangeApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\ShiftChangeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\ShiftChangeMaster.Designer.cs">
+      <DependentUpon>ShiftChangeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\WarningMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\WarningMasterForm.Designer.cs">
+      <DependentUpon>WarningMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\AdjusterApprovalRemoval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\AdjusterApprovalRemoval.Designer.cs">
+      <DependentUpon>AdjusterApprovalRemoval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\AppreciatioandWarningcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\AppreciatioandWarningcs.Designer.cs">
+      <DependentUpon>AppreciatioandWarningcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\ContractApprovalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\ContractApprovalForm.Designer.cs">
+      <DependentUpon>ContractApprovalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\CorrectionApprovalMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\CorrectionApprovalMaster.Designer.cs">
+      <DependentUpon>CorrectionApprovalMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\DateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\DateForm.Designer.cs">
+      <DependentUpon>DateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\EmployeeDeactivationApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\EmployeeDeactivationApproval.Designer.cs">
+      <DependentUpon>EmployeeDeactivationApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\GatePassApprovalFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\GatePassApprovalFormcs.Designer.cs">
+      <DependentUpon>GatePassApprovalFormcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\LevelApprovalForm_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\LevelApprovalForm_1.Designer.cs">
+      <DependentUpon>LevelApprovalForm_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\LevelApprovalForm_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\LevelApprovalForm_2.Designer.cs">
+      <DependentUpon>LevelApprovalForm_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\LevelApprovalForm_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\LevelApprovalForm_3.Designer.cs">
+      <DependentUpon>LevelApprovalForm_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\LHRApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\LHRApproval.Designer.cs">
+      <DependentUpon>LHRApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\OTApprovalSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\OTApprovalSubForm.Designer.cs">
+      <DependentUpon>OTApprovalSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\PayrollConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\PayrollConfirmation.Designer.cs">
+      <DependentUpon>PayrollConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approvals\WarningApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approvals\WarningApproval.Designer.cs">
+      <DependentUpon>WarningApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AdjusterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\AdjusterForm.Designer.cs">
+      <DependentUpon>AdjusterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\DailyAttendanceMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\DailyAttendanceMaster.Designer.cs">
+      <DependentUpon>DailyAttendanceMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\Displayform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\Displayform.Designer.cs">
+      <DependentUpon>Displayform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\EmpInoutExceptionfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\EmpInoutExceptionfrm.Designer.cs">
+      <DependentUpon>EmpInoutExceptionfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\EmployeeLeaveAndOFf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\EmployeeLeaveAndOFf.Designer.cs">
+      <DependentUpon>EmployeeLeaveAndOFf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\MasterOTRuler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\MasterOTRuler.Designer.cs">
+      <DependentUpon>MasterOTRuler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\MissedEmployeeCloseRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\MissedEmployeeCloseRegister.Designer.cs">
+      <DependentUpon>MissedEmployeeCloseRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\MissedOutCloseregisterfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\MissedOutCloseregisterfrm.Designer.cs">
+      <DependentUpon>MissedOutCloseregisterfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\NewCloseregister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\NewCloseregister.Designer.cs">
+      <DependentUpon>NewCloseregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\OverOTEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendance\OverOTEmployee.Designer.cs">
+      <DependentUpon>OverOTEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ATCHRMMessagebox.cs" />
+    <Compile Include="Controls\frmShowMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmShowMessage.designer.cs">
+      <DependentUpon>frmShowMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Datalayer\AdjusterDatabean.cs" />
+    <Compile Include="Datalayer\EmployeeDatabean.cs" />
+    <Compile Include="Datalayer\OvertimeDatabean.cs" />
+    <Compile Include="Datalayer\PayrollDatabean.cs" />
+    <Compile Include="Datalayer\PayrollEmployeeDetailsDataBean.cs" />
+    <Compile Include="Datalayer\RecruitmentApprovalDataBean.cs" />
+    <Compile Include="Datalayer\CompanyDatabean.cs" />
+    <Compile Include="Datalayer\DesignationDatabean.cs" />
+    <Compile Include="Datalayer\LeaveDataBean.cs" />
+    <Compile Include="Datalayer\RecruitAppDatabean.cs" />
+    <Compile Include="Datalayer\ReportDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datalayer\SalaryCompDataBean.cs" />
+    <Compile Include="Datalayer\ShiftDataBean.cs" />
+    <Compile Include="Datalayer\SwipeRuleDatabean.cs" />
+    <Compile Include="ErrorLogger.cs" />
+    <Compile Include="GridViewmModels\ClsDatabase.cs" />
+    <Compile Include="GridViewmModels\FrmWindowTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridViewmModels\FrmWindowTry.Designer.cs">
+      <DependentUpon>FrmWindowTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewmModels\MergeDatagridview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GridViewmModels\OutlookGridGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridViewmModels\RoundGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HR\AppreciationSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\AppreciationSubForm.Designer.cs">
+      <DependentUpon>AppreciationSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\ApprectionMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ApprectionMasterForm.Designer.cs">
+      <DependentUpon>ApprectionMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\BiodataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\BiodataForm.Designer.cs">
+      <DependentUpon>BiodataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\ContractEndingEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ContractEndingEmployees.Designer.cs">
+      <DependentUpon>ContractEndingEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\DeserteeEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\DeserteeEmployee.Designer.cs">
+      <DependentUpon>DeserteeEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\ChangeEmployeeBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\ChangeEmployeeBank.Designer.cs">
+      <DependentUpon>ChangeEmployeeBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeDataSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeDataSearch.Designer.cs">
+      <DependentUpon>EmployeeDataSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployyeDetialsShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployyeDetialsShowForm.Designer.cs">
+      <DependentUpon>EmployyeDetialsShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\AddEmpEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\AddEmpEditForm.Designer.cs">
+      <DependentUpon>AddEmpEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\ContractrenewalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\ContractrenewalForm.Designer.cs">
+      <DependentUpon>ContractrenewalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\DataDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\DataDisplayForm.Designer.cs">
+      <DependentUpon>DataDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeedataEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeedataEdit.Designer.cs">
+      <DependentUpon>EmployeedataEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeDeactivationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeDeactivationForm.Designer.cs">
+      <DependentUpon>EmployeeDeactivationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeDetailsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeDetailsEditForm.Designer.cs">
+      <DependentUpon>EmployeeDetailsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeMasterForm.Designer.cs">
+      <DependentUpon>EmployeeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeePerk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeePerk.Designer.cs">
+      <DependentUpon>EmployeePerk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeePersonalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeePersonalForm.Designer.cs">
+      <DependentUpon>EmployeePersonalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeSalaryDetailsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeSalaryDetailsEditForm.Designer.cs">
+      <DependentUpon>EmployeeSalaryDetailsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeShiftFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeShiftFormcs.Designer.cs">
+      <DependentUpon>EmployeeShiftFormcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeContactForm.Designer.cs">
+      <DependentUpon>EmployeContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\ReactivateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ReactivateEmployee.Designer.cs">
+      <DependentUpon>ReactivateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\Rules\DesignationOT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\Rules\DesignationOT.Designer.cs">
+      <DependentUpon>DesignationOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\UpdateAccountNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\UpdateAccountNumber.Designer.cs">
+      <DependentUpon>UpdateAccountNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\ContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\ContractForm.Designer.cs">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\EmployeeMainform.Designer.cs">
+      <DependentUpon>EmployeeMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\LeaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\LeaveForm.Designer.cs">
+      <DependentUpon>LeaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\PositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\PositionForm.Designer.cs">
+      <DependentUpon>PositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\SalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\SalaryForm.Designer.cs">
+      <DependentUpon>SalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\ShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeActions\ShiftForm.Designer.cs">
+      <DependentUpon>ShiftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\BankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\BankForm.Designer.cs">
+      <DependentUpon>BankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\BankMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\BankMasterForm.Designer.cs">
+      <DependentUpon>BankMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\BranchesMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\BranchesMasterForm.Designer.cs">
+      <DependentUpon>BranchesMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\BranchMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\BranchMasterForm.Designer.cs">
+      <DependentUpon>BranchMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CompanyForm.Designer.cs">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CompanyMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CompanyMasterForm.Designer.cs">
+      <DependentUpon>CompanyMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CurrencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CurrencyForm.Designer.cs">
+      <DependentUpon>CurrencyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\DepartmentMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\DepartmentMasterForm.Designer.cs">
+      <DependentUpon>DepartmentMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\DesignationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\DesignationForm.Designer.cs">
+      <DependentUpon>DesignationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\DesignationMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\DesignationMasterForm.Designer.cs">
+      <DependentUpon>DesignationMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FormulaEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\FormulaEditorForm.Designer.cs">
+      <DependentUpon>FormulaEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HolidayCalendarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\HolidayCalendarForm.Designer.cs">
+      <DependentUpon>HolidayCalendarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\LeaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\LeaveForm.Designer.cs">
+      <DependentUpon>LeaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\LocationMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\LocationMasterForm.Designer.cs">
+      <DependentUpon>LocationMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PayrollCalender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\PayrollCalender.Designer.cs">
+      <DependentUpon>PayrollCalender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PerkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\PerkForm.Designer.cs">
+      <DependentUpon>PerkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\QualificationMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\QualificationMasterForm.Designer.cs">
+      <DependentUpon>QualificationMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\SalaryComponentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\SalaryComponentForm.Designer.cs">
+      <DependentUpon>SalaryComponentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\SalaryComponentMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\SalaryComponentMaster.Designer.cs">
+      <DependentUpon>SalaryComponentMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\ShiftDetailsMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\ShiftDetailsMasterForm.Designer.cs">
+      <DependentUpon>ShiftDetailsMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\shiftmasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\shiftmasterform.Designer.cs">
+      <DependentUpon>shiftmasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\ShiftMasterFormDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\ShiftMasterFormDetails.Designer.cs">
+      <DependentUpon>ShiftMasterFormDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\UserlistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\UserlistForm.Designer.cs">
+      <DependentUpon>UserlistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\UserRightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\UserRightForm.Designer.cs">
+      <DependentUpon>UserRightForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Salcomponentdataform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Salcomponentdataform.Designer.cs">
+      <DependentUpon>Salcomponentdataform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\ShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\ShiftForm.Designer.cs">
+      <DependentUpon>ShiftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\SwipeRulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\SwipeRulesForm.Designer.cs">
+      <DependentUpon>SwipeRulesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\WorkLimitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\WorkLimitForm.Designer.cs">
+      <DependentUpon>WorkLimitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\IndividualPayrollForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\IndividualPayrollForm.designer.cs">
+      <DependentUpon>IndividualPayrollForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\PayrollReportcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\PayrollReportcs.Designer.cs">
+      <DependentUpon>PayrollReportcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ApplicationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ApplicationReportForm.Designer.cs">
+      <DependentUpon>ApplicationReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Class1.cs" />
+    <Compile Include="Reports\ContractPrintingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ContractPrintingForm.Designer.cs">
+      <DependentUpon>ContractPrintingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomReportViewer.Designer.cs">
+      <DependentUpon>CustomReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DateRangeGreidReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DateRangeGreidReports.Designer.cs">
+      <DependentUpon>DateRangeGreidReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DateRangeReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DateRangeReports.Designer.cs">
+      <DependentUpon>DateRangeReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EmployeeSalaryComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeSalaryComponent.Designer.cs">
+      <DependentUpon>EmployeeSalaryComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EmpoloyeeDetailsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\EmpoloyeeDetailsReport.Designer.cs">
+      <DependentUpon>EmpoloyeeDetailsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FilterableReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FilterableReports.Designer.cs">
+      <DependentUpon>FilterableReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmPayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmPayroll.Designer.cs">
+      <DependentUpon>FrmPayroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LeaveMasterOfEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\LeaveMasterOfEmployee.Designer.cs">
+      <DependentUpon>LeaveMasterOfEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MultiReporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\MultiReporter.Designer.cs">
+      <DependentUpon>MultiReporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Newreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Newreport.Designer.cs">
+      <DependentUpon>Newreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\NIDStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\NIDStatusForm.Designer.cs">
+      <DependentUpon>NIDStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OtApplicationBriefForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\OtApplicationBriefForm.Designer.cs">
+      <DependentUpon>OtApplicationBriefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Payroll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payroll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PayrollReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PayrollReportForm.Designer.cs">
+      <DependentUpon>PayrollReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProgressReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ProgressReport.Designer.cs">
+      <DependentUpon>ProgressReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SqlServerLinq.cs">
+      <DependentUpon>SqlServerLinq.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerLinq.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SqlServerLinq.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SwipeAction\Database.cs" />
+    <Compile Include="SwipeAction\NightShiftDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SwipeAction\NightShiftDetail.Designer.cs">
+      <DependentUpon>NightShiftDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SwipeAction\NightShifttransaction.cs" />
+    <Compile Include="SwipeAction\SwipeActions.cs" />
+    <Compile Include="Transactions\ActionTransactions.cs" />
+    <Compile Include="Transactions\Adjuster\AdjusterTranscation.cs" />
+    <Compile Include="Transactions\Adjuster\OtRulerTransaction.cs" />
+    <Compile Include="Transactions\AnualContractrenewalDaily.cs" />
+    <Compile Include="Transactions\AnycodeAutoGenerator.cs" />
+    <Compile Include="Transactions\ApplicationTransaction.cs" />
+    <Compile Include="Transactions\ApprovalTransaction.cs" />
+    <Compile Include="Transactions\Approvalview\ContractApprovalview.cs" />
+    <Compile Include="Transactions\Approvalview\PayrollApproval.cs" />
+    <Compile Include="Transactions\AttendanceManagementTransaction.cs" />
+    <Compile Include="Transactions\CompanyBranchTransactions.cs" />
+    <Compile Include="Transactions\ControlSetupper.cs" />
+    <Compile Include="Transactions\DataExporter.cs" />
+    <Compile Include="Transactions\DesignationTransaction.cs" />
+    <Compile Include="Transactions\EmployeeRegTransaction.cs" />
+    <Compile Include="Transactions\Helper.cs" />
+    <Compile Include="Transactions\LeaveandAdvanceTransaction.cs" />
+    <Compile Include="Transactions\LeaveTrabnsactionCalculator.cs" />
+    <Compile Include="Transactions\LeaveTransaction.cs" />
+    <Compile Include="Transactions\Leave\LeaveCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\Leave\LeaveCalculator.Designer.cs">
+      <DependentUpon>LeaveCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\Locationtransaction.cs" />
+    <Compile Include="Transactions\NotificationTransaction.cs" />
+    <Compile Include="Transactions\OvertimeandShiftTransaction.cs" />
+    <Compile Include="Transactions\PayrollTransaction\MainPayrollTransaction.cs" />
+    <Compile Include="Transactions\PayrollTransaction\SalaryCalculatuionTransaction.cs" />
+    <Compile Include="Transactions\PerkTransaction.cs" />
+    <Compile Include="Transactions\RecruitApplicationTransaction.cs" />
+    <Compile Include="Transactions\RejectActionTransaction.cs" />
+    <Compile Include="Transactions\ReportTransaction.cs" />
+    <Compile Include="Transactions\SalaryCompTransaction.cs" />
+    <Compile Include="Transactions\ShiftTransaction.cs" />
+    <Compile Include="Transactions\ShiftTransactionNewform.cs" />
+    <Compile Include="Transactions\DatabasePicker.cs" />
+    <Compile Include="Master\UserRightrenewFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\UserRightrenewFrm.Designer.cs">
+      <DependentUpon>UserRightrenewFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Action\ActionApprovalLevel1.resx">
+      <DependentUpon>ActionApprovalLevel1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\ActionMasterForm.resx">
+      <DependentUpon>ActionMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\ActionReasonForm.resx">
+      <DependentUpon>ActionReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\AttendanceManagerForm.resx">
+      <DependentUpon>AttendanceManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\UserAuthenication.resx">
+      <DependentUpon>UserAuthenication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\NewAction.resx">
+      <DependentUpon>NewAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\OFFOtvalueApproval.resx">
+      <DependentUpon>OFFOtvalueApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\OtValueApproval.resx">
+      <DependentUpon>OtValueApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\tryform.resx">
+      <DependentUpon>tryform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Action\Tryform2.resx">
+      <DependentUpon>Tryform2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\AdministraionForm.resx">
+      <DependentUpon>AdministraionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Gridform.resx">
+      <DependentUpon>Gridform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\MultiContractApprovalForm.resx">
+      <DependentUpon>MultiContractApprovalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\LeaveMonitor.resx">
+      <DependentUpon>LeaveMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="encrypter.resx">
+      <DependentUpon>encrypter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\LocationandDeptLink.resx">
+      <DependentUpon>LocationandDeptLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReconcilationForm.resx">
+      <DependentUpon>ReconcilationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceDescrepancyReport.resx">
+      <DependentUpon>AttendanceDescrepancyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Ultrafridform.resx">
+      <DependentUpon>Ultrafridform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\AdvanceApplicationForm.resx">
+      <DependentUpon>AdvanceApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\AdvanceMasterForm.resx">
+      <DependentUpon>AdvanceMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\ContractRenewalForm.resx">
+      <DependentUpon>ContractRenewalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\ContractRenewalMaster.resx">
+      <DependentUpon>ContractRenewalMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\DesignationChangeApplication.resx">
+      <DependentUpon>DesignationChangeApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\DesignationChangeMaster.resx">
+      <DependentUpon>DesignationChangeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\FrmDeactivation.resx">
+      <DependentUpon>FrmDeactivation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\GroupshiftchangeForm.resx">
+      <DependentUpon>GroupshiftchangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\VerbalWarning.resx">
+      <DependentUpon>VerbalWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\FrmLeave.resx">
+      <DependentUpon>FrmLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\FrmLHRStatus.resx">
+      <DependentUpon>FrmLHRStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\FrmOtShow.resx">
+      <DependentUpon>FrmOtShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\FrmRecruit.resx">
+      <DependentUpon>FrmRecruit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\GatePassForm.resx">
+      <DependentUpon>GatePassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\GatepassMaster.resx">
+      <DependentUpon>GatepassMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\LeaveApplicationForm.resx">
+      <DependentUpon>LeaveApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\LeaveConfirmForm.resx">
+      <DependentUpon>LeaveConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\LeaveEncashmentMaster.resx">
+      <DependentUpon>LeaveEncashmentMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\LeaveEnchasementForm.resx">
+      <DependentUpon>LeaveEnchasementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\LevncasetsubForm.resx">
+      <DependentUpon>LevncasetsubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\LostHourRecoverSub.resx">
+      <DependentUpon>LostHourRecoverSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\LostHourRecoveryForm.resx">
+      <DependentUpon>LostHourRecoveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\NonApprovedRecruitmentApllicationForm.resx">
+      <DependentUpon>NonApprovedRecruitmentApllicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\OVertimeApplicationMaster.resx">
+      <DependentUpon>OVertimeApplicationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\OvertimeMasterForm.resx">
+      <DependentUpon>OvertimeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\OvertimeSubForm.resx">
+      <DependentUpon>OvertimeSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\RecruitmentApplicationForm.resx">
+      <DependentUpon>RecruitmentApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\RecruitmentApplicationMasterForm.resx">
+      <DependentUpon>RecruitmentApplicationMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\RecruitmentCodeForm.resx">
+      <DependentUpon>RecruitmentCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\ShiftChangeApplication.resx">
+      <DependentUpon>ShiftChangeApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\ShiftChangeMaster.resx">
+      <DependentUpon>ShiftChangeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\WarningMasterForm.resx">
+      <DependentUpon>WarningMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\AdjusterApprovalRemoval.resx">
+      <DependentUpon>AdjusterApprovalRemoval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\AppreciatioandWarningcs.resx">
+      <DependentUpon>AppreciatioandWarningcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\ContractApprovalForm.resx">
+      <DependentUpon>ContractApprovalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\CorrectionApprovalMaster.resx">
+      <DependentUpon>CorrectionApprovalMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\DateForm.resx">
+      <DependentUpon>DateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\EmployeeDeactivationApproval.resx">
+      <DependentUpon>EmployeeDeactivationApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\GatePassApprovalFormcs.resx">
+      <DependentUpon>GatePassApprovalFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\LevelApprovalForm_1.resx">
+      <DependentUpon>LevelApprovalForm_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\LevelApprovalForm_2.resx">
+      <DependentUpon>LevelApprovalForm_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\LevelApprovalForm_3.resx">
+      <DependentUpon>LevelApprovalForm_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\LHRApproval.resx">
+      <DependentUpon>LHRApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\OTApprovalSubForm.resx">
+      <DependentUpon>OTApprovalSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\PayrollConfirmation.resx">
+      <DependentUpon>PayrollConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approvals\WarningApproval.resx">
+      <DependentUpon>WarningApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\AdjusterForm.resx">
+      <DependentUpon>AdjusterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\DailyAttendanceMaster.resx">
+      <DependentUpon>DailyAttendanceMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\Displayform.resx">
+      <DependentUpon>Displayform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\EmpInoutExceptionfrm.resx">
+      <DependentUpon>EmpInoutExceptionfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\EmployeeLeaveAndOFf.resx">
+      <DependentUpon>EmployeeLeaveAndOFf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\MasterOTRuler.resx">
+      <DependentUpon>MasterOTRuler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\MissedEmployeeCloseRegister.resx">
+      <DependentUpon>MissedEmployeeCloseRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\MissedOutCloseregisterfrm.resx">
+      <DependentUpon>MissedOutCloseregisterfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\NewCloseregister.resx">
+      <DependentUpon>NewCloseregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\OverOTEmployee.resx">
+      <DependentUpon>OverOTEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmShowMessage.resx">
+      <DependentUpon>frmShowMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewmModels\FrmWindowTry.resx">
+      <DependentUpon>FrmWindowTry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridViewmModels\RoundGroup.resx">
+      <DependentUpon>RoundGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\AppreciationSubForm.resx">
+      <DependentUpon>AppreciationSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ApprectionMasterForm.resx">
+      <DependentUpon>ApprectionMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\BiodataForm.resx">
+      <DependentUpon>BiodataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ContractEndingEmployees.resx">
+      <DependentUpon>ContractEndingEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\DeserteeEmployee.resx">
+      <DependentUpon>DeserteeEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\ChangeEmployeeBank.resx">
+      <DependentUpon>ChangeEmployeeBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeDataSearch.resx">
+      <DependentUpon>EmployeeDataSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployyeDetialsShowForm.resx">
+      <DependentUpon>EmployyeDetialsShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\AddEmpEditForm.resx">
+      <DependentUpon>AddEmpEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\ContractrenewalForm.resx">
+      <DependentUpon>ContractrenewalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\DataDisplayForm.resx">
+      <DependentUpon>DataDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeedataEdit.resx">
+      <DependentUpon>EmployeedataEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeeDeactivationForm.resx">
+      <DependentUpon>EmployeeDeactivationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeeDetailsEditForm.resx">
+      <DependentUpon>EmployeeDetailsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeeMasterForm.resx">
+      <DependentUpon>EmployeeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeePerk.resx">
+      <DependentUpon>EmployeePerk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeePersonalForm.resx">
+      <DependentUpon>EmployeePersonalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeeSalaryDetailsEditForm.resx">
+      <DependentUpon>EmployeeSalaryDetailsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeeShiftFormcs.resx">
+      <DependentUpon>EmployeeShiftFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeContactForm.resx">
+      <DependentUpon>EmployeContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ReactivateEmployee.resx">
+      <DependentUpon>ReactivateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\Rules\DesignationOT.resx">
+      <DependentUpon>DesignationOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\UpdateAccountNumber.resx">
+      <DependentUpon>UpdateAccountNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\ContractForm.resx">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\EmployeeMainform.resx">
+      <DependentUpon>EmployeeMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\LeaveForm.resx">
+      <DependentUpon>LeaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\PositionForm.resx">
+      <DependentUpon>PositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\SalaryForm.resx">
+      <DependentUpon>SalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeActions\ShiftForm.resx">
+      <DependentUpon>ShiftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\BankForm.resx">
+      <DependentUpon>BankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\BankMasterForm.resx">
+      <DependentUpon>BankMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\BranchesMasterForm.resx">
+      <DependentUpon>BranchesMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\BranchMasterForm.resx">
+      <DependentUpon>BranchMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CompanyForm.resx">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CompanyMasterForm.resx">
+      <DependentUpon>CompanyMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CurrencyForm.resx">
+      <DependentUpon>CurrencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\DepartmentMasterForm.resx">
+      <DependentUpon>DepartmentMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\DesignationForm.resx">
+      <DependentUpon>DesignationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\DesignationMasterForm.resx">
+      <DependentUpon>DesignationMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\FormulaEditorForm.resx">
+      <DependentUpon>FormulaEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HolidayCalendarForm.resx">
+      <DependentUpon>HolidayCalendarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\LeaveForm.resx">
+      <DependentUpon>LeaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\LocationMasterForm.resx">
+      <DependentUpon>LocationMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\PayrollCalender.resx">
+      <DependentUpon>PayrollCalender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\PerkForm.resx">
+      <DependentUpon>PerkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\QualificationMasterForm.resx">
+      <DependentUpon>QualificationMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\SalaryComponentForm.resx">
+      <DependentUpon>SalaryComponentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\SalaryComponentMaster.resx">
+      <DependentUpon>SalaryComponentMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\ShiftDetailsMasterForm.resx">
+      <DependentUpon>ShiftDetailsMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\shiftmasterform.resx">
+      <DependentUpon>shiftmasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\ShiftMasterFormDetails.resx">
+      <DependentUpon>ShiftMasterFormDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\UserlistForm.resx">
+      <DependentUpon>UserlistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\UserRightForm.resx">
+      <DependentUpon>UserRightForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Salcomponentdataform.resx">
+      <DependentUpon>Salcomponentdataform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\ShiftForm.resx">
+      <DependentUpon>ShiftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\SwipeRulesForm.resx">
+      <DependentUpon>SwipeRulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\WorkLimitForm.resx">
+      <DependentUpon>WorkLimitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\IndividualPayrollForm.resx">
+      <DependentUpon>IndividualPayrollForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\PayrollReportcs.resx">
+      <DependentUpon>PayrollReportcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ApplicationReportForm.resx">
+      <DependentUpon>ApplicationReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ContractPrintingForm.resx">
+      <DependentUpon>ContractPrintingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomReportViewer.resx">
+      <DependentUpon>CustomReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DateRangeGreidReports.resx">
+      <DependentUpon>DateRangeGreidReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DateRangeReports.resx">
+      <DependentUpon>DateRangeReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeSalaryComponent.resx">
+      <DependentUpon>EmployeeSalaryComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmpoloyeeDetailsReport.resx">
+      <DependentUpon>EmpoloyeeDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FilterableReports.resx">
+      <DependentUpon>FilterableReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmPayroll.resx">
+      <DependentUpon>FrmPayroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LeaveMasterOfEmployee.resx">
+      <DependentUpon>LeaveMasterOfEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MultiReporter.resx">
+      <DependentUpon>MultiReporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Newreport.resx">
+      <DependentUpon>Newreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\NIDStatusForm.resx">
+      <DependentUpon>NIDStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OtApplicationBriefForm.resx">
+      <DependentUpon>OtApplicationBriefForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Payroll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Payroll.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayrollReportForm.resx">
+      <DependentUpon>PayrollReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProgressReport.resx">
+      <DependentUpon>ProgressReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\UserRightrenewFrm.resx">
+      <DependentUpon>UserRightrenewFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Fakes Include="Fakes\Microsoft.Office.Interop.Excel.fakes" />
+    <None Include="ATCHRM_TemporaryKey.pfx" />
+    <None Include="Datalayer\ReportDataset.xsc">
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Datalayer\ReportDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datalayer\ReportDataset.xss">
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="SqlServerLinq.dbml.layout">
+      <DependentUpon>SqlServerLinq.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="SwipeAction\NightShiftDetail.resx">
+      <DependentUpon>NightShiftDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\Leave\LeaveCalculator.resx">
+      <DependentUpon>LeaveCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SqlServerLinq.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SqlServerLinq.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ATCHRM.ico" />
+    <Content Include="Properties\images\insert.jpg" />
+    <None Include="Resources\1416891668538.jpg" />
+    <None Include="Resources\ActionIcon.png" />
+    <Content Include="Resources\Actions-document-preview-icon.png" />
+    <Content Include="Resources\application_add.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\arrow_rotate_anticlockwise.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\form_fillpng.gif" />
+    <None Include="Resources\Approval Icon.png" />
+    <Content Include="Resources\hourglass_go.png" />
+    <None Include="Resources\HR_Icon.png" />
+    <None Include="Resources\hrnewImage.jpg" />
+    <None Include="Resources\HR .jpg" />
+    <None Include="Resources\HRj1 .jpg" />
+    <Content Include="Resources\images.jpg" />
+    <None Include="Resources\time_delete.png" />
+    <None Include="Resources\keys.png" />
+    <None Include="Resources\itAdmin.ico" />
+    <None Include="Resources\reporticon.jpg" />
+    <None Include="Resources\reporticon1.jpg" />
+    <None Include="Resources\reporticon2.jpg" />
+    <Content Include="Resources\user_go.png" />
+    <None Include="Reports\Payroll.mht" />
+    <None Include="Resources\application_key.png" />
+    <None Include="Resources\va-department-of-human-resource-management1.jpg" />
+    <None Include="Resources\Human-Resource-Management-Software.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="CutOrder\" />
+    <Folder Include="Transactions\RegularCode\" />
+    <Folder Include="Try\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ATCHRM.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Documents.Excel.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Shared.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.AppStylistSupport.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.Misc.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinEditors.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinExplorerBar.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinGrid.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinListView.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinStatusBar.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinTabControl.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinToolbars.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinTree.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics3.Documents.Excel.v12.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.QualityTools.Testing.Fakes">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.ConnectionInfo">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Diagnostics.STrace">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Dmf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.Sdk.Sfc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.SmoMetadataProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.SqlParser">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.RegSvrEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.ServiceBrokerEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Smo">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SmoExtended">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlClrProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SString">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Properties\images\insert.jpg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Actions-document-preview-icon.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\application_add.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\hourglass_go.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\images 1.jpg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\images.jpg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\user_go.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

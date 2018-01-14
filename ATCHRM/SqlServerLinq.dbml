@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ATCHRM" Class="SqlServerLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=197.232.31.250;Initial Catalog=ATCHRM;Persist Security Info=True;User ID=sa" SettingsObjectName="ATCHRM.Properties.Settings" SettingsPropertyName="ATCHRMConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Adjuster_Details" Member="Adjuster_Details">
+    <Type Name="Adjuster_Detail">
+      <Column Name="Adjuster_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Adjuster_Det_Id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Swipe_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Emp_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Swipe_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Week_Day" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Day_Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="In_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Out_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IN_Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Out_Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="in_Value" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Out_Value" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Adjust_Stat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Adjust_Dura" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Shift_Dura" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Allow_Dura" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Value_Diff" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdjusterMaster_tbl" Member="AdjusterMaster_tbls">
+    <Type Name="AdjusterMaster_tbl">
+      <Column Name="AdjusterID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdjusterCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Todate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DoneOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserPK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BranchLctnPk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Ad_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeLeaveTaken_tbl" Member="EmployeeLeaveTaken_tbls">
+    <Type Name="EmployeeLeaveTaken_tbl">
+      <Column Name="Leaveid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="empid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="dateofleave" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LeavePk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LeaveAppPk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Reason" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Userpk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Dateadded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Istaken" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="AddedVia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShiftMasterNew_tbl" Member="ShiftMasterNew_tbls">
+    <Type Name="ShiftMasterNew_tbl">
+      <Column Name="ShiftPK" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShiftName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmpContract_tbl" Member="EmpContract_tbls">
+    <Type Name="EmpContract_tbl">
+      <Column Name="Contractid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpId" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ContractType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Startdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Endtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExtendedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserPK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Dateadded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActualJoiningDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmpContractDetail_tbl" Member="EmpContractDetail_tbls">
+    <Type Name="EmpContractDetail_tbl">
+      <Column Name="empid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Contractid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CurrentYear" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RenewedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Contractdetid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CloseRegisterRecord_tbl" Member="CloseRegisterRecord_tbls">
+    <Type Name="CloseRegisterRecord_tbl">
+      <Column Name="CloseregisterID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BranchlctnPK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CloseRegisterDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DoneBy" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="AddedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NoofEmployee" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportMaster_tbl" Member="ReportMaster_tbls">
+    <Type Name="ReportMaster_tbl">
+      <Column Name="ReportID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ReportLocation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DepartmentLocation_tbl" Member="DepartmentLocation_tbls">
+    <Type Name="DepartmentLocation_tbl">
+      <Column Name="DeptLocid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeptPK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BranchLctnPK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="AddedBy" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="AddedDate" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeesalCompApplicable_tbl" Member="EmployeesalCompApplicable_tbls">
+    <Type Name="EmployeesalCompApplicable_tbl">
+      <Column Name="empsalcompk" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="empid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SalcompPk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="AddedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AddedBy" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LeaveMaster_tbl" Member="LeaveMaster_tbls">
+    <Type Name="LeaveMaster_tbl">
+      <Column Name="LeavePk" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LeaveName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LeaveType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Isenchasable" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsMaleapp" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsWomenapp" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="EnchasableDays" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="userPk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Allowedleave" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LeaveCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsCarryForward" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CalculationUpto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ConsiderAlso" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActionLog_tbl" Member="ActionLog_tbls">
+    <Type Name="ActionLog_tbl">
+      <Column Name="ActionLogid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ActionType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Empid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ActionTimeTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserPk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeSwipeDaily_tbl" Member="EmployeSwipeDaily_tbls">
+    <Type Name="EmployeSwipeDaily_tbl">
+      <Column Name="swipePK" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="empid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Swipin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SwipeOut" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Duration" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="deviceid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Outstatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Invalue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="OutValue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsCompleted" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CompletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsSalaried" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="swiped_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Shift_Pk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmpSwipedataBank_tbl" Member="EmpSwipedataBank_tbls">
+    <Type Name="EmpSwipedataBank_tbl">
+      <Column Name="Swipedataid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="empid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SwipePK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SwipeDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Intime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Outtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Instatus" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="OutStatus" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Invalue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Outvalue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Actionrequired" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsWaved" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ApprInstatus" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ApprOutStatus" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsAdjusted" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ShiftPk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ApplyInStatus" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ApplyOuttStatus" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ExtraValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ExtraStatus" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdjusterConsil_tbl" Member="AdjusterConsil_tbls">
+    <Type Name="AdjusterConsil_tbl">
+      <Column Name="AdjstConsolID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Empid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Extravalue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Otvalue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LhValue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="AdjusterID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LeaveApplicationMaster" Member="LeaveApplicationMasters">
+    <Type Name="LeaveApplicationMaster">
+      <Column Name="LeaveAppPk" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Empid" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LeavePK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Fromdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Todate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Duration" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Durationtype" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telephonenum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mobilenum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Userpk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LvAppnum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Isencashed" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Display_Hide" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LeaveApprovalMaster_tbl" Member="LeaveApprovalMaster_tbls">
+    <Type Name="LeaveApprovalMaster_tbl">
+      <Column Name="ApprovalPk" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LeaveAppPk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Islevel1" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Islevel2" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Islevel3" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Level1num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Level2num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Level3num" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Level1ApprovalDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Level2ApprovalDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Level3ApprovalDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Userpk1" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Userpk2" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Userpk3" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsCompleted" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeePersonalMaster_tbl" Member="EmployeePersonalMaster_tbls">
+    <Type Name="EmployeePersonalMaster_tbl">
+      <Column Name="empid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpNation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NationalId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PassportNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpGender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Matialstatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="First_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address_Prime" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Address_Second" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Contact_lctnPk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Tel_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ref_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ref_Details" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ref_Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ref_Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Kin_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Kin_Relation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Kin_Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Kin_Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Rec_Id" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="empno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Userpk" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="oldempid" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Incometaxnum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NSSFnum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NHIFnum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateofBirth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Showpending" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Kins_NID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsBlackListed" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="HighestQualification" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Intstatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ExStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsBlacklist" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsDesertee" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmpContractChangeApp_tbl" Member="EmpContractChangeApp_tbls">
+    <Type Name="EmpContractChangeApp_tbl">
+      <Column Name="ContractAppid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractAppnum" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="EmpId" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ContractType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Startdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Endtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExtendedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserPK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Dateadded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActualJoiningDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsLevel1" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="IsLevel2" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="IsLevel3" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="Level1User_PK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Level2User_PK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Level3User_PK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Level1Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Level2Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Level3Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ApplicationType" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
